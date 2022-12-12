@@ -43,11 +43,11 @@ public class Libro {
       System.out.println("Titulo: "+titulo);
     }
     
-    public void impimirDetalles (String autor, String titulo, int numeroPaginas){
+    public void impimirDetalles (){
         System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);
     }
     
-    public String getDetalles (String impimirDetalles){
-        return impimirDetalles;
+    public String getDetalles (){
+        return ("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);
     }
 }
