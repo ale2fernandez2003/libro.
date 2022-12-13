@@ -50,24 +50,38 @@ public class Libro {
     
     public void impimirDetalles (){
         String numeroReferencia = "";
-        boolean esLibroDeTexto;
+        String libroDeTexto;
+        if (esLibroDeTexto){
+            libroDeTexto = "correcto";
+        }
+        else {
+            libroDeTexto = "falso";
+        }
+        
         if (numeroReferencia == ""){
             System.out.println("--");
         }
         else {
-            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas +" Numero de referencia: "+numeroReferencia+" Veces que a sido prestado: "+vecesPrestado+" ¿Es un libro de texto? " +eslibroDeTexto);        
+            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas +" Numero de referencia: "+numeroReferencia+" Veces que a sido prestado: "+vecesPrestado+" ¿Es un libro de texto? " +libroDeTexto);        
         }
     }
     
     public String getDetalles (){
         String detalles = "";
         String numeroReferencia = "";
-        boolean esLibroDeTexto;
+        String libroDeTexto;
+        if (esLibroDeTexto){
+            libroDeTexto = "correcto";
+        }
+        else {
+            libroDeTexto = "falso";
+        }
+        
         if (numeroReferencia == ""){
             detalles = ("--");
         }
         else {
-            detalles = ("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas+" Numero de referencia: "+numeroReferencia+" Veces que a sido prestado: "+vecesPrestado+" ¿Es un libro de texto? " +eslibroDeTexto);        
+            detalles = ("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas+" Numero de referencia: "+numeroReferencia+" Veces que a sido prestado: "+vecesPrestado+" ¿Es un libro de texto? " +libroDeTexto);        
         }
         return detalles;
     }
