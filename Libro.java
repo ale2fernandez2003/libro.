@@ -13,14 +13,16 @@ public class Libro {
     private String autor;
     private String titulo;
     private int numeroPaginas;
+    private String numeroReferencia;
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
      */
-    public Libro(String autorLibro, String tituloLibro, int numeroDePaginas)
+    public Libro(String autorLibro, String tituloLibro, int numeroDePaginas, String numeroDeReferencia)
     {
         autor = autorLibro;
         titulo = tituloLibro;
         numeroPaginas = numeroDePaginas;
+        numeroReferencia = numeroDeReferencia;
     }
     
     public String getAutor (){
@@ -43,11 +45,34 @@ public class Libro {
       System.out.println("Titulo: "+titulo);
     }
     
-    public void impimirDetalles (){
-        System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);
+    public void impimirDetalles (boolean detalles){
+        if (detalles == true){
+            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);
+        }
+        else{
+            System.out.println("-Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas+"-");
+        }
+        
     }
     
-    public String getDetalles (){
-        return ("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);
+    public String getDetalles (boolean detalles){
+        if (detalles == true){
+            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);
+        }
+        else{
+            System.out.println("-Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas+"-");
+        }
+        return boolean detalles;
+    }
+    
+    public String getNumeroReferencia (){
+        if (numeroReferencia.length()>=3) {
+            System.out.println("Modificacion");
+        }
+        return numeroReferencia;
+    }
+    
+    public void setNumeroReferencia (String numeroDeReferencia){
+        this.numeroReferencia = numeroDeReferencia;
     }
 }
