@@ -9,7 +9,6 @@
  * @version 1.2
  */
 public class Libro {
-
     private String autor;
     private String titulo;
     private int numeroPaginas;
@@ -45,12 +44,24 @@ public class Libro {
       System.out.println("Titulo: "+titulo);
     }
     
-    public void impimirDetalles (){
-        System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);
+    public void impimirDetalles (String numeroDeReferencia){
+        if (numeroDeReferencia == ""){
+            System.out.println("--");
+        }
+        else {
+            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);        
+        }
     }
     
-    public String getDetalles (){
-        return ("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);
+    public String getDetalles (String numeroDeReferencia){
+        String detalles = "";
+        if (numeroDeReferencia == ""){
+            System.out.println("--");
+        }
+        else {
+            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);        
+        }
+        return detalles;
     }
     
     public String getNumeroReferencia (){
@@ -58,9 +69,12 @@ public class Libro {
     }
     
     public void setNumeroReferencia (String numeroDeReferencia){
-        if (numeroReferencia.length()>=3) {
+        if (numeroReferencia.length()<3) {
             System.out.println("Mensaje de error");
+            this.numeroReferencia = numeroDeReferencia;
         }
-        this.numeroReferencia = numeroDeReferencia;
+        else{
+            numeroReferencia.substring(0,3);
+        }
     }
 }
