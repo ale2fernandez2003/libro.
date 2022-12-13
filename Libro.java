@@ -58,10 +58,10 @@ public class Libro {
         String detalles = "";
         String numeroReferencia = "";
         if (numeroReferencia == ""){
-            System.out.println("--");
+            detalles = ("--");
         }
         else {
-            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas+" Numero de referencia: "+numeroReferencia);        
+            detalles = ("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas+" Numero de referencia: "+numeroReferencia);        
         }
         return detalles;
     }
