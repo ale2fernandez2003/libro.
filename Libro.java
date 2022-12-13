@@ -45,34 +45,22 @@ public class Libro {
       System.out.println("Titulo: "+titulo);
     }
     
-    public void impimirDetalles (boolean detalles){
-        if (detalles == true){
-            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);
-        }
-        else{
-            System.out.println("-Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas+"-");
-        }
-        
+    public void impimirDetalles (){
+        System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);
     }
     
-    public String getDetalles (boolean detalles){
-        if (detalles == true){
-            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);
-        }
-        else{
-            System.out.println("-Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas+"-");
-        }
-        return boolean detalles;
+    public String getDetalles (){
+        return ("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);
     }
     
     public String getNumeroReferencia (){
-        if (numeroReferencia.length()>=3) {
-            System.out.println("Modificacion");
-        }
         return numeroReferencia;
     }
     
     public void setNumeroReferencia (String numeroDeReferencia){
+        if (numeroReferencia.length()>=3) {
+            System.out.println("Mensaje de error");
+        }
         this.numeroReferencia = numeroDeReferencia;
     }
 }
