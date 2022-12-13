@@ -44,22 +44,24 @@ public class Libro {
       System.out.println("Titulo: "+titulo);
     }
     
-    public void impimirDetalles (String numeroDeReferencia){
-        if (numeroDeReferencia == ""){
+    public void impimirDetalles (){
+        String numeroReferencia = "";
+        if (numeroReferencia == ""){
             System.out.println("--");
         }
         else {
-            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);        
+            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas +" Numero de referencia: "+numeroReferencia);        
         }
     }
     
-    public String getDetalles (String numeroDeReferencia){
+    public String getDetalles (){
         String detalles = "";
-        if (numeroDeReferencia == ""){
+        String numeroReferencia = "";
+        if (numeroReferencia == ""){
             System.out.println("--");
         }
         else {
-            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas);        
+            System.out.println("Titulo: "+titulo+" Autor: "+autor+" Paginas: "+numeroPaginas+" Numero de referencia: "+numeroReferencia);        
         }
         return detalles;
     }
